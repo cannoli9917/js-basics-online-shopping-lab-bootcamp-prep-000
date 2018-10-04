@@ -20,6 +20,7 @@ function viewCart() {
   if (cart.length === 0) {
     return `Your shopping cart is empty.`;
   }
+<<<<<<< HEAD
   else if (cart.length === 1) { 
     return (`In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`);
   }
@@ -30,6 +31,14 @@ function viewCart() {
     }
     string += `and ${cart[cart.length - 1].itemName} at $${cart[cart.length - 1].itemPrice}.`
     return string;
+=======
+  else {
+  for (var i = 0; i < cart.length; i++) {
+    var string = `In your cart, you have `;
+    var itemString = `${cart[i].itemName} at ${cart[i].itemPrice}`;
+    return string.concat(itemString);
+  }
+>>>>>>> 999c98c87b7bfff77d7e64a699e532aa6b74ce26
   }
 }
 
